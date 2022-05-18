@@ -22,6 +22,10 @@ class Concert(models.Model):
     concert_information = models.TextField(blank=True)
     concert_image = CloudinaryField('image', default='placeholder')
     concert_goers = models.ManyToManyField(User, blank=True)
+    concert_created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["concert_created"]
 
     def __str__(self):
         return self.name

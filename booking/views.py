@@ -6,6 +6,6 @@ from .models import Concert
 
 class ConcertList(generic.ListView):
     model = Concert
-    queryset = Concert.objects.order_by('concert_date')
+    queryset = Concert.objects.order_by('concert_created')
     template_name = 'index.html'
     paginate_by = 6
