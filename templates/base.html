@@ -1,13 +1,82 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <title>Concert Booking Venue</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Laila&effect=fire">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
 </head>
+
 <body>
-    <h1>WORLD</h1>
-    
+    <header>
+        <div class="row">
+            <div class="col-md-8">
+                <nav class="nav">
+                    <a class="nav-link active" aria-current="page" href="#">Active</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link disabled">Disabled</a>
+                  </nav>
+                  <div class="div">
+                  
+                 
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <img src="https://res.cloudinary.com/dayrhc7js/image/upload/v1652977535/y87kendemb1pf2rmlhsv.jpg" class="rounded-circle float-end picture" alt="...">
+
+            </div>
+        </div>
+
+    </header>
+    <section>
+     <div class="row">
+         <div class="col-md-6 ">
+             <img src="https://res.cloudinary.com/dayrhc7js/image/upload/v1652987849/i2r3no8vrr4dbbxaipj5.jpg" class=" rounded float-start concert-picture">
+         </div>
+         
+         <div class="col-md-6  ">
+            
+            <div class="card text-center ">
+                
+                <div class="card-body  ">
+                  {% for concert in object_list %}
+                  
+                  <div class="card-header font-effect-fire"><h2>{{ concert.name }}</h2></div>
+                  <br>
+                  <p class="card-text">{{concert.concert_date}}</p>
+                  
+                  
+                  
+              
+                  <p class="card-text">{{ concert.concert_information }}</p>
+                  
+                  {% endfor %}
+                  <a href="#" class="btn btn-primary">BOOK</a>
+                </div>
+                
+              </div>
+              
+            
+         </div>
+     </div>
+                    
+              
+
+     </section>
+    <footer>
+   
+
+    </footer>
 </body>
+
 </html>
