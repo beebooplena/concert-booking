@@ -47,41 +47,13 @@
         </div>
 
     </header>
-    <section>
-     <div class="row">
-         <div class="col-md-6 ">
-             <img src="https://res.cloudinary.com/dayrhc7js/image/upload/v1652987849/i2r3no8vrr4dbbxaipj5.jpg" class=" rounded float-start concert-picture">
-         </div>
+    <section >
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+    </section>
          
-         <div class="col-md-6  ">
-            
-            <div class="card text-center ">
-                
-                <div class="card-body  ">
-                  {% for concert in object_list %}
-                  
-                  <div class="card-header font-effect-fire"><h2>{{ concert.name }} </h2></div>
-                  <br>
-                  <p class="card-text">{{concert.concert_date}}  <i class="fa-solid fa-clock"></i></p>
-                  
-                  
-                  
-              
-                  <p class="card-text">{{ concert.concert_information }}</p>
-                  
-                  {% endfor %}
-                  <a href="#" class="hvr-sweep-to-bottom btn btn-primary">BOOK</a>
-                </div>
-                
-              </div>
-              
-            
-         </div>
-     </div>
-                    
-              
-
-     </section>
+       
     <footer class="footer mt-auto py-3">
     <div class="row">
         <ul>
