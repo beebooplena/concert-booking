@@ -11,12 +11,38 @@ body {
 }
 
 .logo {
+    margin-top: 20px;
     font-size: 400%;
     color: rgb(60, 63, 59);
     font-weight: 500;
-    text-shadow: 3px 3px 3px rgb(239, 233, 233)
+    text-shadow: 3px 3px 3px rgb(239, 233, 233)    
+}
+
+.nav-link {
     
+   
+    font-size: 200%;
+    color: rgb(41, 48, 48); 
+     
+}
+
+.nav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 65%;
     
+}
+.nav-one {
+    background-color: rgb(238, 255, 0);
+}
+.nav-two {
+    background-color: rgb(255, 0, 191);
+}
+.nav-three {
+    background-color: rgb(60, 146, 20);
+}
+.nav-four {
+    background-color: rgb(229, 91, 17);
 }
 section {
     background-color: #cce3de;
@@ -77,4 +103,7 @@ section {
   background-size: cover;
   
   
+}
+.footer {
+    height: 100px;
 }
