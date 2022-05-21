@@ -33,7 +33,12 @@
                 <nav class="nav">
                     <a class="hvr-sweep-to-bottom nav-one border border-4 nav-link rounded mx-auto d-block active" aria-current="page" href="{% url 'home' %}">Home</a>
                     <a class="hvr-sweep-to-bottom nav-two border border-4 nav-link rounded mx-auto d-block" href="#">Register</a>
-                    <a class="hvr-sweep-to-bottom nav-three border border-4 nav-link rounded mx-auto d-block" href="#">Log In</a>
+                    {% if user.is_authenticated %}
+
+                    <a class="hvr-sweep-to-bottom nav-three border border-4 nav-link rounded mx-auto d-block" href="{% url 'account_logout' %}">Logout</a>
+                    {% else %}
+                    <a class="hvr-sweep-to-bottom nav-three border border-4 nav-link rounded mx-auto d-block" href="{% url 'account_login' %}">Login</a>
+                    {% endif %}
                     <a class="hvr-sweep-to-bottom nav-four border border-4 nav-link rounded mx-auto d-block" href="#">About</a>
                     
                   </nav>
