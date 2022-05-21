@@ -21,7 +21,7 @@ body {
 .nav-link {
     
    
-    font-size: 200%;
+    font-size: 180%;
     color: rgb(41, 48, 48); 
      
 }
@@ -96,11 +96,12 @@ section {
 
 .picture {
  
-  height: 200px;
-  padding: 5px;
+  height: 220px;
+  margin-bottom: 20px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 10px 10px 0px 0px;
   
   
 }
