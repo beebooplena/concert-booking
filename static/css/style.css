@@ -6,6 +6,17 @@
 
 body {
     background-color: #94d2bd;
+    font-family:Laila, sans-serif;
+    font-weight: 300;
+}
+
+.logo {
+    font-size: 400%;
+    color: rgb(60, 63, 59);
+    font-weight: 500;
+    text-shadow: 3px 3px 3px rgb(239, 233, 233)
+    
+    
 }
 section {
     background-color: #cce3de;
