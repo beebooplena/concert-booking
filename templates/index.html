@@ -2,41 +2,54 @@
 
 {% block content %}
 
-
+<section>
     <div class="row">
         <div class="col-md-6 ">
             <img src="https://res.cloudinary.com/dayrhc7js/image/upload/v1652987849/i2r3no8vrr4dbbxaipj5.jpg"
                 class=" rounded float-start concert-picture">
         </div>
-
+    
         <div class="col-md-6  ">
-
+    
             <div class="card text-center ">
-
+    
                 <div class="card-body  ">
                     {% for concert in object_list %}
-
+    
                     <div class="card-header font-effect-fire">
                         <h2>{{ concert.name }} </h2>
                     </div>
                     <br>
                     <p class="card-text">{{concert.concert_date}} <i class="fa-solid fa-clock"></i></p>
-
-
-
-
+    
+    
+    
+    
                     <p class="card-text">{{ concert.concert_information }}</p>
-
+    
                     {% endfor %}
                     <a href="#" class="hvr-sweep-to-bottom btn btn-primary">BOOK</a>
                 </div>
+    
+    
+    
+                {% comment %}
+{%<form method="POST" action="{% url 'book_ticket' concert_name=concert.name user_name='user.username' %}">
+    {% csrf_token %}
+    <button type="submit">book ticket</button>
 
+</form> %}
+{% endcomment %}
+            
+                
+    
+                </form>
             </div>
-
-
+    
+    
         </div>
     </div>
-
+    </section>
 
 
 

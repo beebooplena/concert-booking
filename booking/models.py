@@ -21,8 +21,12 @@ class Concert(models.Model):
     venue = models.ForeignKey(Venue, blank=True, on_delete=models.CASCADE)
     concert_information = models.TextField(blank=True)
     concert_image = CloudinaryField('image', default='placeholder')
-    concert_goers = models.ManyToManyField(User, blank=True)
+  
 
     def __str__(self):
         return self.name
+
+class Ticket(models.Model):
+    concert = models.ForeignKey(Concert, on_delete=models.PROTECT)
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
 
