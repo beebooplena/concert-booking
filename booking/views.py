@@ -13,9 +13,10 @@ class ConcertList(generic.ListView):
 
 
 
-    
+ 
 def test(request):
     items = Concert.objects.all()
+    
     
     context = {
         'items': items

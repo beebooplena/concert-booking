@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+ {% if user.is_authenticated %}
 
 <section>
     <div class="row">
@@ -28,8 +29,36 @@
                     <p class="card-text">{{ item.concert_information }}</p>
 
                      {% endfor %}
-                    <a href="#" class="hvr-sweep-to-bottom btn btn-primary">BOOK</a>
+
+                     
                 </div>
+{% else %}
+<section>
+    <div class="row">
+        <div class="col-md-6 ">
+            <img src="https://res.cloudinary.com/dayrhc7js/image/upload/v1652987849/i2r3no8vrr4dbbxaipj5.jpg"
+                class=" rounded float-start concert-picture">
+        </div>
+
+        <div class="col-md-6  ">
+
+            <div class="card text-center ">
+
+                <div class="card-body  ">
+                  <h2>ERROR</h2>
+            
+                <p class="card-text">You can`t see this page because you are not logged in. Please try again.</p>
+
+
+            </div>
+            
+
+
+        </div>
+    </div>
+</section>
+
+{% endif %}
 
                 
                
