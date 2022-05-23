@@ -27,6 +27,12 @@
 
 
                     <p class="card-text">{{ item.concert_information }}</p>
+                    <div class="increment">
+                        <button class="btn minus-btn disable" type="button">-</button>
+                        <input type="int" id="ticket_numbers" value="1">
+                        <button class="btn plus-btn" type="button">+</button>
+
+                    </div>
 
                      {% endfor %}
 
