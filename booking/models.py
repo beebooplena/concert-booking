@@ -1,4 +1,6 @@
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
+
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
@@ -21,6 +23,8 @@ class Concert(models.Model):
     venue = models.ForeignKey(Venue, blank=True, on_delete=models.CASCADE)
     concert_information = models.TextField(blank=True)
     concert_image = CloudinaryField('image', default='placeholder')
+    quanty = models.PositiveIntegerField(default=50, validators=[MinValueValidator(0)])
+
   
 
     def __str__(self):
@@ -29,4 +33,8 @@ class Concert(models.Model):
 class Ticket(models.Model):
     concert = models.ForeignKey(Concert, on_delete=models.PROTECT)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
+    order = models.PositiveIntegerField(default=0, validators=[MinValueValidator(1), MaxValueValidator(4)])
+    
+    def __int__(self):
+        return self.order
 
