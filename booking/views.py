@@ -22,16 +22,20 @@ def test(request):
     return render(request, 'booking.html', context)
 
     
-def book_ticket(request, concert_name, user_name, order):
-    concert = get_object_or_404(Concert, name=concert_name)
-    user = get_object_or_404(User, username=user_name)
-    order = get_object_or_404(Ticket, order=order)
-    ticket = Ticket()
-    ticket.concert = concert
-    ticket.user = user
-    ticket.order = order
-    ticket.save()
+def book_ticket(request):
+    if request.method == "POST":
+        quanty = request.POST['quanty']
+        concertId = request.POST['concert_name']
+        username = request.user.username
+        
+        user = get_object_or_404(User, username=username)
 
+        concert = get_object_or_404(Concert, id=concertId)
+        ticket = Ticket()
+        ticket.concert = concert
+        ticket.user = user
+        ticket.order = quanty
+        ticket.save()
     return HttpResponse(" <h1>Ticket Booked!</h1>")
         
 
