@@ -4,6 +4,7 @@ from .models import Concert
 from .models import Ticket
 from django.contrib.auth.models import User
 from django.http import HttpResponse
+from django.db.models import F, Sum
 
 class ConcertList(generic.ListView):
     model = Concert
@@ -29,7 +30,8 @@ def book_ticket(request):
         username = request.user.username
         
         user = get_object_or_404(User, username=username)
-
+        
+        
         concert = get_object_or_404(Concert, id=concertId)
         ticket = Ticket()
         ticket.concert = concert
@@ -37,6 +39,12 @@ def book_ticket(request):
         ticket.order = quanty
         ticket.save()
     return HttpResponse(" <h1>Ticket Booked!</h1>")
+    
+
+
+        
+    
+
         
 
        
