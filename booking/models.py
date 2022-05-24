@@ -25,8 +25,7 @@ class Concert(models.Model):
     concert_image = CloudinaryField('image', default='placeholder')
     quanty = models.PositiveIntegerField(default=50, validators=[MinValueValidator(0)])
 
-  
-
+    
     def __str__(self):
         return self.name
 
@@ -34,7 +33,3 @@ class Ticket(models.Model):
     concert = models.ForeignKey(Concert, on_delete=models.PROTECT)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     order = models.PositiveIntegerField(default=0, validators=[MinValueValidator(1), MaxValueValidator(4)])
-    
-    def __int__(self):
-        return self.order
-
