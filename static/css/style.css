@@ -23,19 +23,43 @@ body {
    
     font-size: 150%;
     
-    color: rgb(96, 101, 96);
+    color: rgb(12, 17, 12);
     background-color: rgb(61, 212, 31); 
     
      
 }
 .check {
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     width: 45%;
     font-size: 140%;
     
     color: rgb(51, 54, 51);
     background-color: rgb(61, 212, 31); 
+
+}
+.plus {
+    
+    width: 5%;
+    font-size: 130%;
+    padding: 3px;
+    
+    color: rgb(51, 54, 51);
+    background-color: #ffffff
+
+}
+.minus {
+    width: 5%;
+    font-size: 130%;
+    padding: 3px;
+    
+    color: rgb(51, 54, 51);
+    background-color: #ffffff
+}
+#totalClicks{
+    width: 10%;
+    font-size: 130%;
+    padding: 6px;
 
 }
 
