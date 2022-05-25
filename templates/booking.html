@@ -32,12 +32,13 @@
                     <div class="increment">
                         <button class="btn minus" type="button">-</button>
                         <span id="totalClicks">0</span>
-                        <input id="hiddenInput" name="quanty" type="hidden" value="0"/>
-                        <input type="hidden" value="{{ item.id }}" name="concert_name"/>
+                        <input id="hiddenInput" name="quanty" type="hidden"max="4" value="0"/>
+                        <input type="hidden" value="{{ item.id }}" max="4"name="concert_name"/>
                         <button class="btn plus" type="button">+</button>
                     </div>
+                    
                     {% csrf_token %}
-                    <input class="btn" type="submit" value="save">
+                    <input class="hvr-sweep-to-bottom btn check  rounded" type="submit" value="save">
                 </form> 
                     {% endfor %}
                    

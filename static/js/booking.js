@@ -10,6 +10,8 @@ btnplus.addEventListener('click', ()=>{
         const currentValue = +hiddenInput.value;
         quantity.innerText = currentValue + 1;
         hiddenInput.value = currentValue + 1;
+       
+        
     })
 
 

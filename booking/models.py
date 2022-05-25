@@ -23,20 +23,24 @@ class Concert(models.Model):
     venue = models.ForeignKey(Venue, blank=True, on_delete=models.CASCADE)
     concert_information = models.TextField(blank=True)
     concert_image = CloudinaryField('image', default='placeholder')
-    quanty = models.PositiveIntegerField(default=50, validators=[MinValueValidator(0)])
-
+    total_left = models.IntegerField(default=50)
     
+
     def __str__(self):
         return self.name
 
+  
+    
 class Ticket(models.Model):
     concert = models.ForeignKey(Concert, on_delete=models.PROTECT)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
-    order = models.PositiveIntegerField(default=0, validators=[MinValueValidator(1), MaxValueValidator(4)])
+    order = models.IntegerField(default=0)
+    
 
     def __str__(self):
         return self.user.username
-
+    
+    
     
 
         
