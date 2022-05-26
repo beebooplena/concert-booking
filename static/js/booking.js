@@ -22,3 +22,5 @@ btnminus.addEventListener('click', ()=>{
     quantity.innerText = currentValue - 1;
     hiddenInput.value = currentValue - 1;
 })
+
+
