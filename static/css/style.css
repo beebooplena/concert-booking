@@ -142,7 +142,10 @@ section {
   
   
 }
-
+.should {
+    font-size: 120%;
+    color: rgb(75, 12, 221);
+}
 
 .footer {
     height: 50px;
