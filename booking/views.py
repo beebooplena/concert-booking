@@ -1,10 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render,redirect, get_object_or_404
 from django.views import generic, View
 from .models import Concert
 from .models import Ticket
 from django.contrib.auth.models import User
-from django.http import HttpResponse
-from django.db.models import F, Sum
+from django.contrib import messages
+
+
 
 class ConcertList(generic.ListView):
     model = Concert
@@ -35,6 +36,15 @@ def book_ticket(request):
         ticket.user = user
         ticket.order = quanty
         ticket.save()
+        messages.success(request, ('You successfully booked your ticket or tickets!'))
+        return redirect('home')
+    else:
+        messages.error(request, ('Error! Something went wrong. Please try again.'))
+        return redirect('booking')
+        
+        
+    
+
         
         
         
