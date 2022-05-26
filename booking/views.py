@@ -28,24 +28,17 @@ def book_ticket(request):
         quanty = request.POST['quanty']
         concertId = request.POST['concert_name']
         username = request.user.username
-        
-        
         user = get_object_or_404(User, username=username)
-        
-        
-        
         concert = get_object_or_404(Concert, id=concertId)
         ticket = Ticket()
-       
-        
         ticket.concert = concert
         ticket.user = user
         ticket.order = quanty
-        
-        
         ticket.save()
         
-    return HttpResponse(" <h1>Ticket Booked!</h1>")
+        
+        
+        
     
 
 

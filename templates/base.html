@@ -46,6 +46,9 @@
                     <a class="hvr-sweep-to-bottom nav-five border border-4 nav-link rounded mx-auto d-block" href="#">Contact</a>
                     
                   </nav>
+                  
+                      
+                  
            
 
             </div>
@@ -57,6 +60,27 @@
 
     </header>
     <section >
+        <div class="container">
+        <div class="row justify-content-md-center">
+            <div class=" col-4 ">
+                
+                  {% for message in messages %}
+                  <div class="alert {{message.tags}} alert-dismissible fade show" id="alert-msg" role="alert">
+                  {{ message| safe }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+                  </div>
+
+                  {% endfor %}
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+    </div>
+    
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
