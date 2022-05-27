@@ -45,6 +45,7 @@ def book_ticket(request):
 
             messages.error(request, ('Error! You can`t book 0 tickets.Please try again'))
             return redirect('booking')
+            
         form = TicketForm(request.POST)
         if form.is_valid():
             messages.success(request, ('You successfully booked your ticket or tickets!'))

@@ -34,7 +34,8 @@ class Concert(models.Model):
 class Ticket(models.Model):
     concert = models.ForeignKey(Concert, on_delete=models.PROTECT)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
-    order = models.PositiveIntegerField(default=0, validators=[MinValueValidator(1),MaxValueValidator(4)])
+    order = models.PositiveIntegerField(default=0, validators=[
+        MinValueValidator(1), MaxValueValidator(4)])
     
 
     def __str__(self):
