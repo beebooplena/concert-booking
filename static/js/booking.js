@@ -10,7 +10,6 @@ btnplus.addEventListener('click', ()=>{
         const currentValue = +hiddenInput.value;
         if(currentValue > 3){
             return
-
         }
         quantity.innerText = currentValue + 1;
         hiddenInput.value = currentValue + 1;

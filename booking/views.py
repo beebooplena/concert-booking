@@ -13,7 +13,7 @@ class ConcertList(generic.ListView):
     template_name = "index.html"
 
 
-def test(request):
+def book(request):
     queryset = Concert.objects.all()
     items = Ticket.objects.all()
     
@@ -23,28 +23,44 @@ def test(request):
     }
     return render(request, 'booking.html', context)
 
+
+def edit(request):
+    
+    items = Ticket.objects.all()
+    
+    
+    context = {
+        'items': items,
+        
+    }
+    return render(request, 'booking_edit.html', context)
+
     
 def book_ticket(request):
     if request.method == "POST":
         if request.POST['quanty'] == '0':
             messages.error(request, ('Error! You can`t book 0 tickets.Please try again'))
             return redirect('booking')
-          
         else:
-            quanty = request.POST['quanty']
             
+            quanty = request.POST['quanty']
             concertId = request.POST['concert_name']
             username = request.user.username
             user = get_object_or_404(User, username=username)
+            
             concert = get_object_or_404(Concert, id=concertId)
             ticket = Ticket()
             ticket.concert = concert
             ticket.user = user
             ticket.order = quanty
-
             ticket.save()
             messages.success(request, ('You successfully booked your ticket or tickets!'))
-            return redirect('home')       
+            return redirect('edit')
+
+            
+
+
+                   
     else:
         messages.error(request, ('Error! Something went wrong. Please try again.'))
         return redirect('booking')
