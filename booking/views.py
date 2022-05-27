@@ -24,7 +24,7 @@ def book(request):
     return render(request, 'booking.html', context)
 
 
-def edit(request):
+def show(request):
     
     items = Ticket.objects.all()
     
@@ -33,7 +33,7 @@ def edit(request):
         'items': items,
         
     }
-    return render(request, 'booking_edit.html', context)
+    return render(request, 'booking_show.html', context)
 
     
 def book_ticket(request):
@@ -55,7 +55,7 @@ def book_ticket(request):
             ticket.order = quanty
             ticket.save()
             messages.success(request, ('You successfully booked your ticket or tickets!'))
-            return redirect('edit')
+            return redirect('show')
 
             
 
