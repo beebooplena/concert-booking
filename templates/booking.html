@@ -16,31 +16,16 @@
 
                 <div class="card-body  ">
                     
-                    {% for item in concert %}
-
-                    <div class="card-header font-effect-fire">
-                        <h2>{{ item.name }} </h2>
-                    </div>
-                    <br>
-                    <p class="card-text">{{item.concert_date}} <i class="fa-solid fa-clock"></i></p>
-
-
-
-
-                    <p class="card-text">{{ item.concert_information }}</p>
-                <form action="/book_ticket/" method="post">
-                    <div class="increment">
-                        <button class="btn minus" type="button">-</button>
-                        <span id="totalClicks">0</span>
-                        <input id="hiddenInput" name="quanty" type="hidden" value="0">
-                        <input type="hidden" value="{{ item.id }}" name="concert_name"/>
-                        <button class="btn plus" type="button">+</button>
-                    </div>
+                    
+                <form action="book_ticket" method="POST">
+                    {{form}}
+                   
+               
                     
                     {% csrf_token %}
                     <input class="hvr-sweep-to-bottom btn check  rounded" type="submit" value="Book">
                 </form> 
-                    {% endfor %}
+                    
                    
                 </div>
                 {% else %}

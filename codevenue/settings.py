@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'booking',
     'fontawesomefree',
-    'crispy_forms',
+    
 ]
 
 SITE_ID = 1

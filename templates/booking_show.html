@@ -20,23 +20,23 @@
 
                     <div class="div">
                         <td class="font-effect-fire"> {{item.user}} </td>
-                    </div>
-                    <div class="div">
-                    <td>You have {{item.order}} <i class="fa-solid fa-ticket"></i></td>
-                    </div>
-                    <div class="div">
+                        
 
-                    <td>{{ item.concert.name }} <i class="fa-solid fa-circle-check"></i></td>
-                </div>
-                <div class="div">
-                    <a href="edit">
-                        <button>Edit
-
-                        </button>
-                    </a>
-                </div>
-                
-                    {% endfor %}
+                        <p class="card-text">{{ item.concert.name }}</p>
+                        <form action="/book_ticket/" method="post">
+                            <div class="increment">
+                                <button class="btn minus" type="button">-</button>
+                                <span id="totalClicks">{{item.order}}</span>
+                                <input id="hiddenInput" name="quanty" type="hidden" value="0">
+                                <input type="hidden" value="{{ item.id }}" name="concert_name"/>
+                                <button class="btn plus" type="button">+</button>
+                            </div>
+                            
+                            {% csrf_token %}
+                            <input class="hvr-sweep-to-bottom btn check  rounded" type="submit" value="Book">
+                        </form> 
+                       
+                        {% endfor %}
                    
                 </div>
                 {% else %}
