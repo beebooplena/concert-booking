@@ -35,6 +35,18 @@ def show(request):
     }
     return render(request, 'booking_show.html', context)
 
+
+def edit(request):
+    
+    items = Ticket.objects.all()
+    
+    
+    context = {
+        'items': items,
+        
+    }
+    return render(request, 'booking_edit.html', context)
+
     
 def book_ticket(request):
     if request.method == "POST":
