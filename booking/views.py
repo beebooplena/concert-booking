@@ -41,67 +41,24 @@ def booking(request):
     
 def book_ticket(request):
     if request.method == 'POST':
+        if request.POST['order'] == '0':
+
+            messages.error(request, ('Error! You can`t book 0 tickets.Please try again'))
+            return redirect('booking')
         form = TicketForm(request.POST)
         if form.is_valid():
+            messages.success(request, ('You successfully booked your ticket or tickets!'))
+            return redirect('home')
             form.save()
+            
+    else:
+        messages.error(request, ('Error! Something went wrong. Please try again.'))
+        return redirect('booking')
 
-        return redirect('home')
+        
     form = TicketForm()
     context = {
         'form': form
     }
     return render(request, 'booking.html', context)
    
-             
- 
-
-# def book_ticket(request):
-#     if request.method == "POST":
-#         if request.POST['quanty'] == '0':
-#             messages.error(request, ('Error! You can`t book 0 tickets.Please try again'))
-#             return redirect('booking')
-#         else:
-            
-#             quanty = request.POST['quanty']
-#             concertId = request.POST['concert_name']
-#             username = request.user.username
-#             user = get_object_or_404(User, username=username)
-            
-#             concert = get_object_or_404(Concert, id=concertId)
-#             ticket = Ticket()
-#             ticket.concert = concert
-#             ticket.user = user
-#             ticket.order = quanty
-#             ticket.save()
-#             messages.success(request, ('You successfully booked your ticket or tickets!'))
-#             return redirect('show')
-# else:
-#         messages.error(request, ('Error! Something went wrong. Please try again.'))
-#         return redirect('booking')
-
-
-    
-        
-        
-    
-
-        
-        
-        
-        
-    
-
-
-        
-    
-
-        
-
-       
-
-   
-
-
-
-
-    
