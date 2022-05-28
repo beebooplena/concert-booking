@@ -23,7 +23,7 @@ def show_booking(request):
 
     }
     return render(request, 'show_booking.html', context)
-    
+
 def booking(request):
 
     if request.method == 'POST':
@@ -37,6 +37,10 @@ def booking(request):
         'form': form
     }
     return render(request, 'booking.html', context)
+
+
+def edit_booking(request, item_id):
+    return render(request, 'edit_booking.html')
 
 
 

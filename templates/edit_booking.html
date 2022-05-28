@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+<section>
+    <div class="row">
+        <div class="col-md-6 ">
+            <img src="https://res.cloudinary.com/dayrhc7js/image/upload/v1652987849/i2r3no8vrr4dbbxaipj5.jpg"
+                class=" rounded float-start concert-picture">
+        </div>
+
+        <div class="col-md-6  ">
+
+            <div class="card text-center ">
+
+                <div class="card-body  ">
+                    <h1>EDIT</h1>
+            <div class=" mb-3">
+                <form  method="POST">
+                    {{form.as_p}}
+                   
+               
+                    
+                    {% csrf_token %}
+                    <input class="hvr-sweep-to-bottom btn check  rounded" type="submit" value="Update">
+                </form> 
+            </div>
+             
+                    
+                   
+                </div>
+                {% else %}
+                <section>
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <img src="https://res.cloudinary.com/dayrhc7js/image/upload/v1652987849/i2r3no8vrr4dbbxaipj5.jpg"
+                                class=" rounded float-start concert-picture">
+                        </div>
+
+                        <div class="col-md-6  ">
+
+                            <div class="card text-center ">
+
+                                <div class="card-body  ">
+                                    <h2>ERROR</h2>
+
+                                    <p class="card-text">You can`t see this page because you are not logged in. Please
+                                        try again.</p>
+
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                </section>
+
+                {% endif %}
+
+                {% endblock %}
