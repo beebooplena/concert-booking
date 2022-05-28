@@ -25,7 +25,6 @@ class Concert(models.Model):
     concert_image = CloudinaryField('image', default='placeholder')
     total_left = models.PositiveIntegerField(default=50)
     
-
     def __str__(self):
         return self.name
 
@@ -34,6 +33,10 @@ class Ticket(models.Model):
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     order = models.PositiveIntegerField(default=0, validators=[
         MinValueValidator(1), MaxValueValidator(4)])
+
+    def __str__(self):
+
+        return self.user.username
 
 
 

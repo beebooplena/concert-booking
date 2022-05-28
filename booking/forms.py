@@ -5,6 +5,8 @@ class TicketForm(forms.ModelForm):
     class Meta:
         model = Ticket
         fields = ['concert','user','order']
+        exclude = ('user',)
+        
         widgets = {
             'concert': forms.Select(attrs={'class': 'form-control-sm'}),
             'user': forms.Select(attrs={'class': 'form-control-sm'}),
