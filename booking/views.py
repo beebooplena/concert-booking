@@ -15,6 +15,15 @@ class ConcertList(generic.ListView):
     template_name = "index.html"
 
 
+
+def show_booking(request):
+    items = Ticket.objects.all()
+    context = {
+        'items':items
+
+    }
+    return render(request, 'show_booking.html', context)
+    
 def booking(request):
 
     if request.method == 'POST':
@@ -49,7 +58,7 @@ def book_ticket(request):
         form = TicketForm(request.POST)
         if form.is_valid():
             messages.success(request, ('You successfully booked your ticket or tickets!'))
-            return redirect('home')
+            return redirect('show')
             form.save()
             
     else:

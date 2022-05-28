@@ -44,7 +44,7 @@
                     <a class="hvr-sweep-to-bottom nav-three border border-4 nav-link rounded mx-auto d-block"
                         href="{% url 'account_logout' %}">Logout</a>
                     <a class="hvr-sweep-to-bottom nav-six border border-4 nav-link rounded mx-auto d-block"
-                        href="">Your Tickets</a>
+                        href="{% url 'show_booking' %}">Your Tickets</a>
                     {% else %}
                     <a class="hvr-sweep-to-bottom nav-three border border-4 nav-link rounded mx-auto d-block"
                         href="{% url 'account_login' %}">Login</a>
