@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% for thing in things %}
+
 
 <section>
     <div class="row">
@@ -14,7 +16,7 @@
             <div class="card text-center ">
 
                 <div class="card-body  ">
-                    {% for thing in things %}
+                    
                         
                     <div class="card-header font-effect-fire">
                         <h2>{{ thing.name }} </h2>

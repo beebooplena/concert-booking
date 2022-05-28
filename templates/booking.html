@@ -2,11 +2,11 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-{% for concert in object_list %}
+{% for item in items %}
 <section>
     <div class="row">
         <div class="col-md-6 ">
-            <img src="{{concert.concert_image.url}}"
+            <img src="https://res.cloudinary.com/dayrhc7js/image/upload/v1652987849/i2r3no8vrr4dbbxaipj5.jpg"
                 class=" rounded float-start concert-picture">
         </div>
 {% endfor %}

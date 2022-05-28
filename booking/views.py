@@ -41,16 +41,13 @@ def booking(request):
     items = Concert.objects.all()
     
 
-    if request.method == 'POST':
-        form = TicketForm(request.POST)
-        if form.is_valid():
-            form.save()
+   
 
-        return redirect('home')
+        
     form = TicketForm()
     context = {
         'form': form,
-        'items':items
+        'items': items
     }
     return render(request, 'booking.html', context)
 
@@ -58,11 +55,13 @@ def booking(request):
 def edit_booking(request, item_id):
 
     thing = get_object_or_404(Ticket, id=item_id)
+    
     if request.method == 'POST':
         if request.POST['order'] == '0':
 
             messages.error(request, ('Error! You can`t book 0 tickets.Please try again'))
             return redirect('booking')
+            
         form = TicketForm(request.POST, instance=thing)
         if form.is_valid():
             messages.success(request, ('You successfully updated your tickets!'))
@@ -116,6 +115,7 @@ def book_ticket(request):
             thought.user = request.user
             thought.save()
             messages.success(request, ('You successfully booked your ticket or tickets!'))
+            return redirect('show_booking')
 
     form.save()
     form = TicketForm()
@@ -125,10 +125,14 @@ def book_ticket(request):
     return render(request, 'booking.html', context)
    
 def delete_booking(request, item_id):
+    
 
     info = get_object_or_404(Ticket, id=item_id)
     messages.success(request, ('You successfully deleted your ticket or tickets!'))
     info.delete()
+   
+    
+
     
     return redirect('home')
     
