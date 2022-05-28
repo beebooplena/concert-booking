@@ -40,7 +40,23 @@ def booking(request):
 
 
 def edit_booking(request, item_id):
-    return render(request, 'edit_booking.html')
+    thing = get_object_or_404(Ticket, id=item_id)
+    if request.method == 'POST':
+        if request.POST['order'] == '0':
+
+            messages.error(request, ('Error! You can`t book 0 tickets.Please try again'))
+            return redirect('booking')
+        form = TicketForm(request.POST, instance=thing)
+        if form.is_valid():
+            messages.success(request, ('You successfully updated your tickets!'))
+            
+            form.save()
+            return redirect('show_booking')
+    form = TicketForm(instance=thing)
+    context = {
+        'form': form
+    }
+    return render(request, 'edit_booking.html', context)
 
 
 
@@ -62,8 +78,9 @@ def book_ticket(request):
         form = TicketForm(request.POST)
         if form.is_valid():
             messages.success(request, ('You successfully booked your ticket or tickets!'))
-            return redirect('show')
+            
             form.save()
+            return redirect('show_booking')
             
     else:
         messages.error(request, ('Error! Something went wrong. Please try again.'))
