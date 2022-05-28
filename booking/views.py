@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
 from .models import Concert
 from .models import Ticket
+from .models import Venue
 from django.contrib.auth.models import User
 from django.contrib import messages
 from .forms import TicketForm
@@ -23,6 +24,15 @@ def show_booking(request):
 
     }
     return render(request, 'show_booking.html', context)
+
+
+def about_booking(request):
+    things = Venue.objects.all()
+    context = {
+        'things':things
+
+    }
+    return render(request, 'about_booking.html', context)
 
 def booking(request):
     items = Concert.objects.all()
@@ -98,8 +108,7 @@ def book_ticket(request):
             thought = form.save(commit=False)
             
             # Save change ticket number in Concent table (database)
-            print(current_concent.total_left- int(request.POST['order']))
-            print('****************************')
+          
             
             
 
