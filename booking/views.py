@@ -95,5 +95,6 @@ def book_ticket(request):
    
 def delete_booking(request, item_id):
     info = get_object_or_404(Ticket, id=item_id)
+    messages.success(request, ('You successfully deleted your ticket or tickets!'))
     info.delete()
-    return redirect('show_booking')
+    return redirect('home')

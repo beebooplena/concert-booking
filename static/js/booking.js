@@ -26,22 +26,5 @@
 //     hiddenInput.value = currentValue - 1;
 // })
 
-let test = document.getElementById('#id_order');
-let ja = document.getElementsByName('order')
-
-test.addEventListener('click', ()=>{
-    const hello = test.ariaValueMax;
-    console.log("hello")
-    if (hello > 3){
-        return
-    }
-})
-ja.addEventListener('click', ()=>{
-    const hello = test.value;
-    console.log("hello")
-    if (hello > 3){
-        return
-    }
-})
 
 
