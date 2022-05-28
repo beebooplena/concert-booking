@@ -93,3 +93,7 @@ def book_ticket(request):
     }
     return render(request, 'booking.html', context)
    
+def delete_booking(request, item_id):
+    info = get_object_or_404(Ticket, id=item_id)
+    info.delete()
+    return redirect('show_booking')

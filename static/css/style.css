@@ -30,13 +30,24 @@ body {
 }
 .check {
     margin: 10px 0px 10px 30px;
-    
     width: 45%;
     font-size: 140%;
-    
     color: rgb(51, 54, 51);
     background-color: rgb(61, 212, 31); 
-
+}
+.edit {
+    margin: 10px 0px 10px 30px;
+    width: 25%;
+    font-size: 110%;
+    color: rgb(51, 54, 51);
+    background-color: rgb(61, 212, 31); 
+}
+.delete {
+    margin: 10px 5px 10px 30px;
+    width: 25%;
+    font-size: 110%;
+    color: rgb(51, 54, 51);
+    background-color: rgb(231, 11, 11); 
 }
 .plus {
     
