@@ -126,7 +126,8 @@ section {
 .book {
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 65%;
+    width: 50%;
+    font-size: 120%;
 
 }
 

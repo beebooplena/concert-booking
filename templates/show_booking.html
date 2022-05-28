@@ -13,17 +13,22 @@
         <div class="col-md-6  ">
 
             <div class="card text-center ">
-
-                <div class="card-body  ">
+               
                     
                     {% for item in items %}
 
-                    <div class="div">
-                        <td class="font-effect-fire"> {{item.user}} </td>
-                        <td class="font-effect-fire">You have {{item.order}} for {{ item.concert.name }}</td>
-                        <a href="/edit/{{item.id}}">
-                            <button>Edit</button>
-                        </a>
+                    <div class="card-body">
+                        
+                        <h2 class="card-header font-effect-fire">Your bookings</h2>
+                        <br>
+                        
+                          <h3 class="card-title">{{item.user}}</h3>
+                          <p class=" card-text">You have {{item.order}} <i class="fa-solid fa-ticket"></i> tickets for the concert: {{ item.concert.name }}</p>
+                          <p class=" card-text">Date: {{ item.concert.concert_date }} <i class="fa-solid fa-calendar-check"></i></p>
+                          <a href="/edit/{{item.id}}" class="book btn btn-primary">Edit</a>
+                        </div>
+                      </div>
+                      
                         
 
                         
@@ -31,7 +36,7 @@
                        
                         {% endfor %}
                    
-                </div>
+                
                 {% else %}
                 <section>
                     <div class="row">
