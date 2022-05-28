@@ -92,11 +92,16 @@ def book_ticket(request):
         # Save ticket form to database
         form = TicketForm(request.POST)
         if form.is_valid():
+        
+            current_concent.total_left-=int(request.POST['order'])
+            current_concent.save()
             thought = form.save(commit=False)
+            
             # Save change ticket number in Concent table (database)
-            #concents.concents.total_left = concents.total_left - tickes
-            # concents.save()
-            print(thought.concert)
+            print(current_concent.total_left- int(request.POST['order']))
+            print('****************************')
+            
+            
 
             thought.user = request.user
             thought.save()
