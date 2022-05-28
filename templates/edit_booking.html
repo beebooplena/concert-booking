@@ -15,21 +15,18 @@
             <div class="card text-center ">
 
                 <div class="card-body  ">
-                    <h1>EDIT</h1>
-            <div class=" mb-3">
+                    
+                <h2 class="card-header font-effect-fire">Edit your booking</h2>
+                <br>
                 <form  method="POST">
                     {{form.as_p}}
                    
                
                     
                     {% csrf_token %}
-                    <input class="hvr-sweep-to-bottom btn check  rounded" type="submit" value="Update">
+                    <input class="btn check hvr-sweep-to-bottom rounded" type="submit" value="Update">
                 </form> 
-            </div>
-             
-                    
-                   
-                </div>
+            
                 {% else %}
                 <section>
                     <div class="row">
