@@ -12,6 +12,7 @@ from .forms import TicketForm
 
 class ConcertList(generic.ListView):
     model = Concert
+    
     queryset = Concert.objects.all()
     template_name = "index.html"
 
@@ -19,8 +20,10 @@ class ConcertList(generic.ListView):
 
 def show_booking(request):
     items = Ticket.objects.all()
+    
     context = {
         'items':items
+        
 
     }
     return render(request, 'show_booking.html', context)
@@ -36,10 +39,7 @@ def about_booking(request):
 
 def booking(request):
     items = Concert.objects.all()
-    context = {
-        'items':items
-
-    }
+    
 
     if request.method == 'POST':
         form = TicketForm(request.POST)
@@ -49,7 +49,8 @@ def booking(request):
         return redirect('home')
     form = TicketForm()
     context = {
-        'form': form
+        'form': form,
+        'items':items
     }
     return render(request, 'booking.html', context)
 

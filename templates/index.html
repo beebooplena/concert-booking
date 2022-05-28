@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+{% for concert in object_list %}
 <section>
     <div class="row">
         <div class="col-md-6 ">
-            <img src="https://res.cloudinary.com/dayrhc7js/image/upload/v1652987849/i2r3no8vrr4dbbxaipj5.jpg"
+            <img src="{{concert.concert_image.url}}"
                 class=" rounded float-start concert-picture">
         </div>
 
@@ -14,7 +14,7 @@
             <div class="card text-center ">
 
                 <div class="card-body  ">
-                    {% for concert in object_list %}
+                    
                         
                     <div class="card-header font-effect-fire">
                         <h2>{{ concert.name }} </h2>

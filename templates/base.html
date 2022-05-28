@@ -61,10 +61,12 @@
 
 
 
-            </div>
+            </div>{% for thing in things %}
             <div class="col-md-4">
-                <img src="https://res.cloudinary.com/dayrhc7js/image/upload/v1652977535/y87kendemb1pf2rmlhsv.jpg"
-                    class="rounded-circle float-end picture" alt="...">
+                
+                <img src="{{thing.venue_image.url}}"
+                class="rounded-circle float-end picture" alt="...">
+                  {% endfor %}
 
             </div>
         </div>
@@ -95,7 +97,7 @@
         {% endblock content %}
     </section>
 
-
+    
     <footer class="footer mt-auto py-3">
         <div class="row">
             <ul>
@@ -104,7 +106,7 @@
                 </li>
             </ul>
         </div>
-
+    
         <script src="{% static 'js/booking.js' %}"></script>
         <script src="{% static 'js/alert.js' %}"></script>
       

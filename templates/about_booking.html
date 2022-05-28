@@ -20,12 +20,16 @@
                         <h2>{{ thing.name }} </h2>
                     </div>
                     <br>
-                    <p class="card-text">{{thing.address}} <i class="fa-solid fa-clock"></i></p>
+                    <div class="card-text">{{thing.address}} </p>
+                       
+                    
 
 
 
 
-                    <p class="card-text">{{ thing.zip_code }}</p>
+                    <p class="card-text">{{ concert.zip_code }}</p>
+                    <p class="card-text">{{thing.phone_number}} </p>
+                    <p class="card-text">{{thing.email}} </p>
 
                     {% endfor %}
                     {% if user.is_authenticated %}
@@ -44,5 +48,7 @@
     </div>
 </section>
 {% endblock %}
+
+
 
 
