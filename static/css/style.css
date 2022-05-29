@@ -56,7 +56,7 @@ body {
 .nav {
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 65%;  
+    width: 45%;
 }
 
 .nav-one {
@@ -146,4 +146,44 @@ section {
     text-align: center;
     font-size: 220%;
     margin-top: 15px;
+}
+
+/*style for the media queries*/
+
+@media screen and (max-width:700px) {
+    .nav-link {
+        position: inherit;
+        
+        text-align: center;
+    }
+    .nav {
+        position: inherit;
+        margin-left: 90px;
+
+    }
+
+    .picture {
+        position: inherit;
+        margin-right: 60px;
+    }
+
+    .logo {
+        margin-left: 15px;
+    }
+    .concert-picture{
+        position: inherit;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+    .card-body {
+        position:inherit;
+        
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .text-center {
+        position: inherit;
+        margin-left: 20px;
+    }
+
 }
