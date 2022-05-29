@@ -5,6 +5,8 @@
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block content %}
+<section>
+<div class="row account">
 <h1>{% trans "Sign Out" %}</h1>
 
 <p>{% trans 'Are you sure you want to sign out?' %}</p>
@@ -16,6 +18,8 @@
   {% endif %}
   <button type="btn btn-primary btn-lg hvr-sweep-to-bottom">{% trans 'Sign Out' %}</button>
 </form>
+</div>
+</section>
 
 
 {% endblock %}

@@ -20,12 +20,6 @@ body {
     text-shadow: 3px 3px 3px rgb(239, 233, 233)    
 }
 
-.nav-link {
-    font-size: 150%;
-    color: rgb(12, 17, 12);
-    background-color: rgb(61, 212, 31);    
-}
-
 .check {
     margin: 10px 0px 10px 30px;
     width: 45%;
@@ -52,11 +46,15 @@ body {
 }
 
 /* style for nav */
-
+.nav-link {
+    font-size: 150%;
+    color: rgb(12, 17, 12);
+    background-color: rgb(61, 212, 31);    
+}
 .nav {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 45%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 55%;
 }
 
 .nav-one {
@@ -140,8 +138,12 @@ section {
 /* style for footer */
 .footer {
     height: 50px;
+    bottom: 0;
 }
 
+ul {
+    list-style: none;
+}
 .footer-link {
     text-align: center;
     font-size: 220%;
@@ -150,15 +152,15 @@ section {
 
 /*style for the media queries*/
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:900px) {
     .nav-link {
         position: inherit;
         
         text-align: center;
     }
     .nav {
-        position: inherit;
-        margin-left: 90px;
+        display: block;
+        margin-left: 80px;
 
     }
 
@@ -168,12 +170,13 @@ section {
     }
 
     .logo {
+        display: block;
         margin-left: 15px;
     }
     .concert-picture{
         position: inherit;
         margin-left: 40px;
-        margin-top: 10px;
+        margin-top: 30px;
     }
     .card-body {
         position:inherit;
@@ -185,5 +188,14 @@ section {
         position: inherit;
         margin-left: 20px;
     }
-
+    .check {
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    .footer-link {
+        position: inherit;
+        margin-top: 45px;
+        margin-right: 20px;
+    }
+   
 }
