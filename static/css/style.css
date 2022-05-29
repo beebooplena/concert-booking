@@ -35,6 +35,25 @@ body {
     color: rgb(51, 54, 51);
     background-color: rgb(61, 212, 31); 
 }
+.read {
+    margin: 10px 0px 10px 30px;
+    width: 25%;
+    font-size: 140%;
+    color: rgb(51, 54, 51);
+    background-color: rgb(239, 25, 221); 
+
+}
+#show {
+    
+    margin-left:175px;
+    margin-bottom: 20px;
+    text-align: center;
+    
+    color: rgb(19, 20, 19);
+    background-color: rgb(62, 196, 62);
+    padding: 3px;
+
+}
 .edit {
     margin: 10px 0px 10px 30px;
     width: 25%;

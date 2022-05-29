@@ -1,9 +1,5 @@
 from django.urls import path
 from . import views
-
-
-
-
 urlpatterns = [
      path("", views.ConcertList.as_view(), name="home"),
      path('booking', views.booking, name='booking'),
@@ -12,4 +8,4 @@ urlpatterns = [
      path('edit/<item_id>', views.edit_booking, name='edit'),
      path('delete/<item_id>', views.delete_booking, name='delete'),
      path('about', views.about_booking, name='about'),
- ]
+ ] 

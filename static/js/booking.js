@@ -1,30 +1,9 @@
-// let btnplus = document.querySelector('.plus');
-// let btnminus = document.querySelector('.minus');
-
-// let quantity = document.querySelector('#totalClicks');
-// let hiddenInput = document.getElementById("hiddenInput");
-
-
-
-// btnplus.addEventListener('click', ()=>{
-//         const currentValue = +hiddenInput.value;
-//         if(currentValue > 3){
-//             return
-//         }
-//         quantity.innerText = currentValue + 1;
-//         hiddenInput.value = currentValue + 1;
-       
-        
-//     })
-
-
-// btnminus.addEventListener('click', ()=>{
-//     const currentValue = +hiddenInput.value;
-//     if(currentValue==0)return
-    
-//     quantity.innerText = currentValue - 1;
-//     hiddenInput.value = currentValue - 1;
-// })
-
-
-
+function show() {
+    let read = document.getElementById("show");
+    if (read.style.display === "none") {
+        read.style.display = "block";
+    }
+    else {
+        read.style.display = "none";
+    }
+}
