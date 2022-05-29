@@ -1,3 +1,6 @@
+'''
+Booking URL Configuration
+'''
 from django.urls import path
 from . import views
 urlpatterns = [
@@ -8,4 +11,4 @@ urlpatterns = [
      path('edit/<item_id>', views.edit_booking, name='edit'),
      path('delete/<item_id>', views.delete_booking, name='delete'),
      path('about', views.about_booking, name='about'),
- ] 
+]
