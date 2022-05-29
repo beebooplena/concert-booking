@@ -3,59 +3,45 @@
 {% block content %}
 {% if user.is_authenticated %}
 {% for item in items %}
+<!-- Section image -->
 <section>
     <div class="row">
         <div class="col-md-6 ">
             <img src="https://res.cloudinary.com/dayrhc7js/image/upload/v1652987849/i2r3no8vrr4dbbxaipj5.jpg"
                 class=" rounded float-start concert-picture">
         </div>
-{% endfor %}
-
+        {% endfor %}
+        <!-- Booking tickets bootstrap card -->
         <div class="col-md-6  ">
-
             <div class="card text-center ">
-
                 <div class="card-body  ">
-                    
-            <div class=" mb-3">
-            <h2 class="card-header font-effect-fire">Book Tickets</h2>
-                <br>
-                <form action="book_ticket" method="POST">
-                    {{form.as_p}}
-                   
-               
-                    
-                    {% csrf_token %}
-                    <input class="hvr-sweep-to-bottom btn check  rounded" type="submit" value="Book">
-                </form> 
-            </div>
-             
-                    
-                   
+                    <div class=" mb-3">
+                        <h2 class="card-header font-effect-fire">Book Tickets</h2>
+                        <br>
+                        <!-- form -->
+                        <form action="book_ticket" method="POST">
+                            {{form.as_p}}
+                            {% csrf_token %}
+                            <input class="hvr-sweep-to-bottom btn check  rounded" type="submit" value="Book">
+                        </form>
+                    </div>
                 </div>
                 {% else %}
                 <section>
+                    <!-- Section image -->
                     <div class="row">
                         <div class="col-md-6 ">
                             <img src="https://res.cloudinary.com/dayrhc7js/image/upload/v1652987849/i2r3no8vrr4dbbxaipj5.jpg"
                                 class=" rounded float-start concert-picture">
                         </div>
-
+                        <!-- Error Message -->
                         <div class="col-md-6  ">
-
                             <div class="card text-center ">
-
                                 <div class="card-body  ">
                                     <h2>ERROR</h2>
-
                                     <p class="card-text">You can`t see this page because you are not logged in. Please
                                         try again.</p>
-
-
                                 </div>
-
-
-
                             </div>
                         </div>
                 </section>

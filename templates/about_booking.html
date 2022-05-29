@@ -3,8 +3,8 @@
 {% block content %}
 {% for thing in things %}
 
-
 <section>
+    <!-- Section image -->
     <div class="row">
         <div class="col-md-6 ">
             <img src="https://res.cloudinary.com/dayrhc7js/image/upload/v1652987849/i2r3no8vrr4dbbxaipj5.jpg"
@@ -12,44 +12,21 @@
         </div>
 
         <div class="col-md-6  ">
-
+            <!-- Bootstrap card -->
             <div class="card text-center ">
-
                 <div class="card-body  ">
-                    
-                        
                     <div class="card-header font-effect-fire">
                         <h2>{{ thing.name }} </h2>
                     </div>
                     <br>
                     <div class="card-text">{{thing.address}} </p>
-                       
-                    
+                        <p class="card-text">{{ concert.zip_code }}</p>
+                        <p class="card-text">{{thing.phone_number}} </p>
+                        <p class="card-text">{{thing.email}} </p>
 
-
-
-
-                    <p class="card-text">{{ concert.zip_code }}</p>
-                    <p class="card-text">{{thing.phone_number}} </p>
-                    <p class="card-text">{{thing.email}} </p>
-
-                    {% endfor %}
-                    
-                    <button id="read" class="btn read hvr-sweep-to-bottom" onclick="show()">Read More</button>
-                  
-                  
-                    
-                    
+                        {% endfor %}
                     </div>
-                   
-
-
-        </div>
-        
-    </div>
+                </div>
+            </div>
 </section>
 {% endblock %}
-
-
-
-

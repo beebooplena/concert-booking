@@ -4,56 +4,44 @@
 {% if user.is_authenticated %}
 
 <section>
+    <!-- Section Image -->
     <div class="row">
         <div class="col-md-6 ">
             <img src="https://res.cloudinary.com/dayrhc7js/image/upload/v1652987849/i2r3no8vrr4dbbxaipj5.jpg"
                 class=" rounded float-start concert-picture">
         </div>
-
         <div class="col-md-6  ">
-
+            <!-- Edit booking bootstrap card -->
             <div class="card text-center ">
-
                 <div class="card-body  ">
-                    
-                <h2 class="card-header font-effect-fire">Edit your booking</h2>
-                <br>
-                <form  method="POST">
-                    {{form.as_p}}
-                   
-               
-                    
-                    {% csrf_token %}
-                    <input class="btn check hvr-sweep-to-bottom rounded" type="submit" value="Update">
-                </form> 
-            
-                {% else %}
-                <section>
-                    <div class="row">
-                        <div class="col-md-6 ">
-                            <img src="https://res.cloudinary.com/dayrhc7js/image/upload/v1652987849/i2r3no8vrr4dbbxaipj5.jpg"
-                                class=" rounded float-start concert-picture">
-                        </div>
-
-                        <div class="col-md-6  ">
-
-                            <div class="card text-center ">
-
-                                <div class="card-body  ">
-                                    <h2>ERROR</h2>
-
-                                    <p class="card-text">You can`t see this page because you are not logged in. Please
-                                        try again.</p>
-
-
-                                </div>
-
-
-
+                    <h2 class="card-header font-effect-fire">Edit your booking</h2>
+                    <br>
+                    <!-- form -->
+                    <form method="POST">
+                        {{form.as_p}}
+                        {% csrf_token %}
+                        <input class="btn check hvr-sweep-to-bottom rounded" type="submit" value="Update">
+                    </form>
+                    {% else %}
+                    <section>
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <img src="https://res.cloudinary.com/dayrhc7js/image/upload/v1652987849/i2r3no8vrr4dbbxaipj5.jpg"
+                                    class=" rounded float-start concert-picture">
                             </div>
-                        </div>
-                </section>
+                            <div class="col-md-6  ">
+                                <div class="card text-center ">
+                                    <div class="card-body  ">
+                                        <h2>ERROR</h2>
 
-                {% endif %}
+                                        <p class="card-text">You can`t see this page because you are not logged in.
+                                            Please
+                                            try again.</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
 
-                {% endblock %}
+                    {% endif %}
+
+                    {% endblock %}
