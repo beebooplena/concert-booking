@@ -1,4 +1,4 @@
-//Credit: code institute from 'I think before I blog
+//Credit: code institute from 'I think before I blog.
 setTimeout(function () {
     let messages = document.getElementById('msg');
     let alert = new bootstrap.Alert(messages);
