@@ -123,9 +123,12 @@ def book_ticket(request):
         if form.is_valid():
             current_concert.total_left -= int(request.POST['order'])
             current_concert.save()
+        # Credit:Got this idea from:
+        #  https://stackoverflow.com/questions/37773803/saving-modelform-with-user-id
             concert_goer = form.save(commit=False)
             concert_goer.user = request.user
             concert_goer.save()
+        # end credit
             messages.success(request, (
                 'You successfully booked your ticket or tickets!'))
             return redirect('show_booking')
