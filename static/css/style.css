@@ -19,7 +19,7 @@ body {
     font-weight: 500;
     text-shadow: 3px 3px 3px rgb(239, 233, 233)    
 }
-
+/* style for buttons*/
 .check {
     margin: 10px 0px 10px 30px;
     width: 45%;
@@ -28,7 +28,15 @@ body {
     background-color: rgb(61, 212, 31); 
 }
 
-/* style for buttons*/
+.signout {
+    margin: 10px 0px 10px 30px;
+    width: 25%;
+    font-size: 100%;
+    color: rgb(51, 54, 51);
+    background-color: rgb(71, 172, 235); 
+}
+
+
 .edit {
     margin: 10px 0px 10px 30px;
     width: 25%;
