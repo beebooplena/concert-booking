@@ -1,6 +1,5 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
-
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
@@ -24,9 +23,10 @@ class Concert(models.Model):
     concert_information = models.TextField(blank=True)
     concert_image = CloudinaryField('image', default='placeholder')
     total_left = models.PositiveIntegerField(default=50)
-    
+
     def __str__(self):
         return self.name
+
 
 class Ticket(models.Model):
     concert = models.ForeignKey(Concert, on_delete=models.PROTECT)
@@ -35,10 +35,4 @@ class Ticket(models.Model):
         MinValueValidator(1), MaxValueValidator(4)])
 
     def __str__(self):
-
-        return self.user.username
-
-
-
-    
-
+        return self.user

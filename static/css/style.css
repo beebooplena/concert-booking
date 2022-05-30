@@ -1,4 +1,3 @@
-
 /* borrowed some of this * code from Love Running project */
 * {
     margin: 0;
@@ -19,6 +18,7 @@ body {
     font-weight: 500;
     text-shadow: 3px 3px 3px rgb(239, 233, 233)    
 }
+
 /* style for buttons*/
 .check {
     margin: 10px 0px 10px 30px;
@@ -35,7 +35,6 @@ body {
     color: rgb(51, 54, 51);
     background-color: rgb(71, 172, 235); 
 }
-
 
 .edit {
     margin: 10px 0px 10px 30px;
@@ -83,7 +82,8 @@ body {
 .nav-six {
     background-color: rgb(230, 143, 29);
 }
-section {
+
+.section {
     background-color: #cce3de;
 }
 
@@ -205,5 +205,4 @@ ul {
         margin-top: 45px;
         margin-right: 20px;
     }
-   
 }
