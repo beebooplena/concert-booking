@@ -1,6 +1,7 @@
 # The Music Gallery Booking Site
 This is the webpage I created for the fourth milestone project(Fullstack frameworks with django)at code institute, diploma in Software Development. I wanted to make a music concert booking system. The inspiration for this, is that music is one of my big hobbies. It is also a mobile responsive website. You can visit the website here:-----
 The website has a landing page, booking page, edit and delete booking page and an about booking page. The booking page has a CRUD(create, read, update and delete) focus for the user.
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989902/responsive_utzz0f.png)
 
 
 
@@ -55,6 +56,8 @@ Account registration:
 * As a site user I can register an account so that I can book tickets
 
 ### Kanban planner
+
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989928/user-story_zm3yva.png)
 
 
 ### Strategy plane
@@ -127,6 +130,7 @@ The users can register and create an account, so they can book and save their ti
 The users can log in and can book tickets and see their bookings. This is also done by django Allauth.
 
 Below you can see a flow chart of the webpage and see how the templates are connected.
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989901/flow_bwhiqa.png)
 
 
 As you can see on the flow chart, only logged in users can book tickets and save their booking information. The users will be navigated to the registraion page if their are not logged in. If the users try to go to booking page by typing the address, this will not work, since the users must be authenticated. When a user book tickets, this information will be posted to the admin. The users can see their booking on the page after they have booked tickets. The users can now decide if they want to delete or edit their booking. A success message will arrive when a user book, edit, delete, login or logout. An error message will occur if the users try to order 0 tickets or book tickets more than the total amount of tickets.
@@ -134,6 +138,13 @@ A user can only book tickets for themselves. A user can not book tickets for oth
 
 
 ## Skeleton plane 
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989901/landing-page_drir0l.png)
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989920/login_pbrafd.png)
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989920/about_rndmm7.png)
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989920/edit-delete_jdp4qg.png)
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989902/signout_nfxzgi.png)
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989902/booking_k4awfa.png)
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989902/registration_klpiac.png)
 
 
 
@@ -172,10 +183,11 @@ The buttons has different colors. The delete button has a strong red color that 
 The concert Image is to display that this is a concert booking site. I am the owner of the image.
 
 ### sing-in page
-
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989902/login_bvyp17.jpg)
 
 
 ### Sign-up page
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989902/register_njxkbk.jpg)
 
 
  ### Footer
@@ -368,7 +380,10 @@ DATABASES = {
 * You can also choose if the app will rebuild automatically when you do changes and push the code. If you will enable, click "Enable automatic Deploys".
 
 
-
+## Bugs
+I had a big bug when I tried to deploy to heroku. I tried for 7 hours , and after 7
+hours we finally found the problem. I will thank James and Ger for their hard work. We found out that
+cloudinary had massive files with fontawesome. After 7 hours, after making a new cloudinary. Everything went fine. I have now had to stress inplant all my images again cross the site and readme. 1 hour deadline left.
 
 ## Credits 
 I would like to give my deepest thanks to Get and Shean from code institute.
