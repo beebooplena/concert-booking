@@ -1,6 +1,6 @@
 # The Music Gallery Booking Site
 This is the webpage I created for the fourth milestone project(Fullstack frameworks with django)at code institute, diploma in Software Development. I wanted to make a music concert booking system. The inspiration for this, is that music is one of my big hobbies. It is also a mobile responsive website. You can visit the website here:-----
-The website has a landing page, booking page, edit and delete booking page and an about page with a CRUD(create, read, update and delete) focus for the user.
+The website has a landing page, booking page, edit and delete booking page and an about booking page. The booking page has a CRUD(create, read, update and delete) focus for the user.
 
 
 
@@ -52,19 +52,20 @@ Booking:
 * As a site user I can book one or more tickets so that I can watch the consert
 Account registration:
 * As a site user I can register an account so that I can book tickets
+
 ### Kanban planner
 ![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653949959/user-story_gqbqr9.png)
 
 ### Strategy plane
 I could not finish all my userstories, this was because of lack of time and knowledge.The two userstories that was left behind are also the two least important userstories. Below is a list (1-5), where one is least important and 5  is the most important userstory.
-#### 5
+##### 5
 * As a site admin I can update information about the concert venue so that the information can always be up to date.
 * As a site admin I can create, delete and update concerts so that I can display new concerts or delete old concerts from the site
 * As a site user I can book one or more tickets so that I can watch the consert
 * As a site user I can easily understand that this site is a booking site for music concerts so that I can decide if I will book  or not.
 * As a site user I can register an account so that I can book tickets
 * As a site user I can delete my booked tickets in case I can`t go to the consert
-#### 4
+##### 4
 * As a site user I can edit my booked ticket or tickets  so that I can change the amount of booked tickets
 * As a site user I can read about the concert venue so that I can get information about the facilities.
 * As a site user I can send feedback so that The booking site owner receives my message.
@@ -72,18 +73,18 @@ I could not finish all my userstories, this was because of lack of time and know
 
 ### Future Features
 (1-5), where one is least important and 5  is the most important userstory.
-#### 5
+##### 5
 * As an admin, I can be safe that the total tickets will be adjusted as the users are booking, editing or deleting tickets.
 * As a site user,I can pay for my ticket on the webpage.
 * As a site user I can give feedback to the owner.
 * As an admin, I can have the spectators book and buy for the tickets on the webpage.
 * As a user, I can see how many tickets there are left to book.
 
-#### 4
+##### 4
 * As a site user I can see a map on the webpage, so I know where the venue is.
 * As a site user, I can  read more about the bands that are going to play.
 
-#### 3
+##### 3
 * As a site user, I can view my profile and add profile image and information.
 * As a site user, I can  read more about the bands that are going to play.
 * As an admin, I can add videos from concerts on the webpage.
@@ -322,16 +323,16 @@ It can be wise to deploy to heroku in the very beginning of your project. I will
 * in terminal write: pip3 install dj_database_url psycopg2
 * in terminal write: install dj3-cloudinary-storage
 * in terminal write: pip3 freeze --local > requirements.txt
-### django
-* django-admin startproject "name" .
-* python3 manage.py startapp "name"
+
+* in terminal, django-admin startproject "name" .
+* in terminal, python3 manage.py startapp "name"
 * Go to settings.py and add "name" in your installed.apps
-* python3 manage.py migrate
-* python3 manage.py runserver
+* in terminal, python3 manage.py migrate
+* in terminal, python3 manage.py runserver
 * make an env.py file
 * Make sure that env.py is included in the gitignore file.
 * Add your django password and cloudinary url inside the env.py
-### Heroku
+
 
 * Go into the webpage Heroku.com and create an account.
 
@@ -359,7 +360,7 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
-* Write python3 manage.py migrate
+* in terminal, Write python3 manage.py migrate
 * Now you are using the heroku database
 
 * In settings.py write this, so you can use herokuapp and localhost. ALLOWED_HOSTS = ['small-venue-booking-app.herokuapp.com', 'localhost']
@@ -389,21 +390,46 @@ DATABASES = {
 
 
 ## Credits 
+I would like to give my deepest thanks to Get and Shean from code institute.
+I would like to thank the slack community that has answered my questions.
 
 
+## Content
+
+* I got inspired from' I think before I blog' project from code institute: I borrowed the settime js function for the messages:
+Here is the original code:
 
 
-
-
-### Content
-
-
+setTimeout(function () {
+    let messages = document.getElementById('msg');
+    let alert = new bootstrap.Alert(messages);
+    alert.close();
+}, 2500);
 
 * I also got inspired from the CL love running project to start with this default code to make it easier to use css. Here is the original code from the CL love running project:
 
 *{ margin:0;
 padding: 0;
 border: none; }
+
+I got inspired from stackoverflow, in how to save a form without including all the users: 
+Here is the original code from stackoverflow: https://stackoverflow.com/questions/37773803/saving-modelform-with-user-id
+
+
+@login_required(login_url='sign_in')
+def add_thought(request):
+    if request.method == 'POST':
+        form = ThoughtForm(request.POST)
+        if form.is_valid():
+            thought = form.save(commit=False)
+            thought.user = request.user
+            thought.save()
+            return HttpResponse('Hurray, saved!')
+    else:
+        form = ThoughtForm()
+    return render(request, 'lala/add_new_thought.html', {
+        'form': form
+    })
 
 * I used icons from font awesome
 
@@ -413,4 +439,5 @@ border: none; }
 
 * I imported a font from google font.
 ### Media
+* I own all the images on the website.
 

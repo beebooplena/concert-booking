@@ -35,4 +35,4 @@ class Ticket(models.Model):
         MinValueValidator(1), MaxValueValidator(4)])
 
     def __str__(self):
-        return self.user
+        return self.user.username
