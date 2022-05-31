@@ -4,7 +4,8 @@ The website has a landing page, booking page, edit and delete booking page and a
 
 
 
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947440/responsive_gwzk6x.png)
+
+
 ## Ui and Ux
 ## Research
 I have a bachelor degree in music, and I have been on a stage several times. I have also attended several concerts as a listener. With this in mind, I would have liked a landing page, where you instantly knew it was a booking site. My experience and my analyse of the live venue scene, I would suggest an easy to use booking site. A clean and well looking site, where the users can book and edit or delete booked tickets. This kind of booking sites, can help small venue events with controlling how many people that will arrive at a concert.
@@ -54,10 +55,10 @@ Account registration:
 * As a site user I can register an account so that I can book tickets
 
 ### Kanban planner
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653949959/user-story_gqbqr9.png)
+
 
 ### Strategy plane
-I could not finish all my userstories, this was because of lack of time and knowledge.The two userstories that was left behind are also the two least important userstories. Below is a list (1-5), where one is least important and 5  is the most important userstory.
+I could not finish all my userstories, this was because of lack of time and knowledge. The two userstories that was left behind are also the two least important userstories. Below is a list (1-5), where one is least important and 5  is the most important userstory.
 ##### 5
 * As a site admin I can update information about the concert venue so that the information can always be up to date.
 * As a site admin I can create, delete and update concerts so that I can display new concerts or delete old concerts from the site
@@ -81,7 +82,8 @@ I could not finish all my userstories, this was because of lack of time and know
 * As a user, I can see how many tickets there are left to book.
 
 ##### 4
-* As a site user I can see a map on the webpage, so I know where the venue is.
+
+* As a site user, I can see a map on the webpage, so I know where the venue is.
 * As a site user, I can  read more about the bands that are going to play.
 
 ##### 3
@@ -125,7 +127,7 @@ The users can register and create an account, so they can book and save their ti
 The users can log in and can book tickets and see their bookings. This is also done by django Allauth.
 
 Below you can see a flow chart of the webpage and see how the templates are connected.
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653956033/flow_l1uj6d.png)
+
 
 As you can see on the flow chart, only logged in users can book tickets and save their booking information. The users will be navigated to the registraion page if their are not logged in. If the users try to go to booking page by typing the address, this will not work, since the users must be authenticated. When a user book tickets, this information will be posted to the admin. The users can see their booking on the page after they have booked tickets. The users can now decide if they want to delete or edit their booking. A success message will arrive when a user book, edit, delete, login or logout. An error message will occur if the users try to order 0 tickets or book tickets more than the total amount of tickets.
 A user can only book tickets for themselves. A user can not book tickets for other users.
@@ -133,13 +135,7 @@ A user can only book tickets for themselves. A user can not book tickets for oth
 
 ## Skeleton plane 
 
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947440/landing-page_tewq56.png)
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947439/login_vghbjs.png)
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947440/registration_bfoxth.png)
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947440/signout_wphijm.png)
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947441/about_a2rqhn.png)
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947441/booking_eat9hh.png)
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947441/edit-delete_fgn5ga.png)
+
 
 
 <br>
@@ -150,9 +146,7 @@ I choosed calm colours as base colors for the website. To the nav bar and button
 yellow, green, pink and blue. The Delete button has a red strong color and the edit button has a green bright button.
 I used https://coolors.co/ to find ideas to how my colors would look nice on a website.
 
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653957215/css_ujl8e8.png)
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653957223/css1_mdxbmh.png)
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947441/edit-delete_aoyte5.jpg)
+
 
 ### Font
 I used the font Laila that look informal and a fun font for the users. I also choosed a fire effect on the header in the bootstrap card.
@@ -168,29 +162,27 @@ The main title is quite large for the users to see. The title has a little shadi
 
 ### booking card
 The bootstrap card has a darker color that stands out from the green calm colors from the website.
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947441/booking_e97qon.jpg)
+
 ### Edit or delete booking card
 The bootstrap card has a darker color that stands out from the green calm colors from the website.
 The buttons has different colors. The delete button has a strong red color that symbolise danger. The edit button has a green bright color.
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947441/edit-delete_aoyte5.jpg)
+
 ### Home Image
+
 The concert Image is to display that this is a concert booking site. I am the owner of the image.
 
 ### sing-in page
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947440/login_vsgmzr.jpg)
+
+
+
 ### Sign-up page
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947440/register_cy1rwb.jpg)
+
 
  ### Footer
  A small footer at the end with a youtube link attach to it.
 
 ### Navigation bar
 The Navigation bar has strong colors that stands out from the calmer base colors that the website has.
-
-
-
-
-
 
 ## Technology
 I used different technologies to make this webpage:
@@ -225,10 +217,10 @@ I used different technologies to make this webpage:
 ## Manuel Testing 
 Because of lack of time, I choosed to manually test my website.
 ### Landing page
-* I click on nav button home to check I am navigated to home.
-* I check that the hoover effect occur on the home nav button
-* I click on the next nav button Login to check I am navigated to the login page.
-* I check that the hoover effect occur on the login nav button
+* I click on nav button home, to check I am navigated to home.
+* I check that the hoover effect occur, on the home nav button
+* I click on the next nav button Login, to check I am navigated to the login page.
+* I check that the hoover effect occur, on the login nav button
 * I click on the next nav button register to check that I am navigated to the registration page.
 * I check that the hoover effect occur on the register nav button
 * I click on the next nav button About to check that I am navigated to the about_booking.html page.
@@ -238,7 +230,7 @@ Because of lack of time, I choosed to manually test my website.
 * I check that the hoover effect occur on the book button
 * I write in the address bar to see if I can navigate to the booking.html page without that I am logged in. I see an error page.
 * I write in the address bar to see if I can navigate to the show_booking.html page without that I am logged in. I see an error page.
-* I write in the address bar to see if I can navigate to the edit_booking.html page without that I am logged in. I see an error page.
+* I write in the address bar to see if I can navigate to the edit_booking.html page, without that I am logged in. I see an error page.
 ### Register page
 * I register in the register page. I check if I can write a username.
 * I check if I can write an email in the email input form. I also check if I can write a non email input, I can not.
@@ -305,12 +297,11 @@ Because of lack of time, I choosed to manually test my website.
 
 * The official Jigsaw validator showed no errors when tested.
 **PEP8**
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947440/pep8_nzj7dl.jpg)
 
 
 **Accessibility**
 * By using lighthouse in devtools I could see that the webpage scored very well on all the tests.
-![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947440/lighthouse_igerog.jpg)
+
 
 
 
@@ -323,7 +314,6 @@ It can be wise to deploy to heroku in the very beginning of your project. I will
 * in terminal write: pip3 install dj_database_url psycopg2
 * in terminal write: install dj3-cloudinary-storage
 * in terminal write: pip3 freeze --local > requirements.txt
-
 * in terminal, django-admin startproject "name" .
 * in terminal, python3 manage.py startapp "name"
 * Go to settings.py and add "name" in your installed.apps
@@ -332,22 +322,13 @@ It can be wise to deploy to heroku in the very beginning of your project. I will
 * make an env.py file
 * Make sure that env.py is included in the gitignore file.
 * Add your django password and cloudinary url inside the env.py
-
-
 * Go into the webpage Heroku.com and create an account.
-
 * In the dashboard in Heroku, click on the "create new app".
-
 * Give your app a unique name and choose your region. Now click on "create app"
-
 * click on resources, add Postgres.
-
-
 * Go to setting tab and find Config Vars, Click on the "Reveal config Vars" and copy the
  postgres database url.
-
 * In your project, make an env.py file and add postgres database url.
-
 * In Heroku, go to setting tab and find Config Vars. Click on the "Reveal Config Vars".
 * In Heroku add PORT as key and value 8000 in config vars
 * In Heroku add django secret password in config vars

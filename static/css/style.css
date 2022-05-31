@@ -158,7 +158,7 @@ ul {
     margin-top: 15px;
 }
 
-/*style for the media queries*/
+/*style for the media queries 900px*/
 
 @media screen and (max-width:900px) {
     .nav-link {
