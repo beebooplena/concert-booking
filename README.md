@@ -1,7 +1,7 @@
 # The Music Gallery Booking Site
 This is the webpage I created for the fourth milestone project(Fullstack frameworks with django)at code institute, diploma in Software Development. I wanted to make a music concert booking system. The inspiration for this, is that music is one of my big hobbies. It is also a mobile responsive website. You can visit the website here:-----
 The website has a landing page, booking page, edit and delete booking page and an about booking page. The booking page has a CRUD(create, read, update and delete) focus for the user.
-![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989902/responsive_utzz0f.png)
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653991534/responsive_s6kp7l.png)
 
 
 
@@ -138,14 +138,6 @@ A user can only book tickets for themselves. A user can not book tickets for oth
 
 
 ## Skeleton plane 
-![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989901/landing-page_drir0l.png)
-![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989920/login_pbrafd.png)
-![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989920/about_rndmm7.png)
-![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989920/edit-delete_jdp4qg.png)
-![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989902/signout_nfxzgi.png)
-![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989902/booking_k4awfa.png)
-![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989902/registration_klpiac.png)
-
 
 
 
