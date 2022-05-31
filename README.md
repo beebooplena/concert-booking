@@ -52,7 +52,7 @@ Booking:
 * As a site user I can book one or more tickets so that I can watch the consert
 Account registration:
 * As a site user I can register an account so that I can book tickets
-
+### Kanban planner
 ![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653949959/user-story_gqbqr9.png)
 
 ### Strategy plane
@@ -129,6 +129,7 @@ Below you can see a flow chart of the webpage and see how the templates are conn
 As you can see on the flow chart, only logged in users can book tickets and save their booking information. The users will be navigated to the registraion page if their are not logged in. If the users try to go to booking page by typing the address, this will not work, since the users must be authenticated. When a user book tickets, this information will be posted to the admin. The users can see their booking on the page after they have booked tickets. The users can now decide if they want to delete or edit their booking. A success message will arrive when a user book, edit, delete, login or logout. An error message will occur if the users try to order 0 tickets or book tickets more than the total amount of tickets.
 A user can only book tickets for themselves. A user can not book tickets for other users.
 
+
 ## Skeleton plane 
 
 ![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947440/landing-page_tewq56.png)
@@ -144,45 +145,46 @@ A user can only book tickets for themselves. A user can not book tickets for oth
 
 
 ## Surface Plane
+I choosed calm colours as base colors for the website. To the nav bar and buttons I choosed bright colors that would stand out a little, like
+yellow, green, pink and blue. The Delete button has a red strong color and the edit button has a green bright button.
+I used https://coolors.co/ to find ideas to how my colors would look nice on a website.
+
+![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653957215/css_ujl8e8.png)
+![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653957223/css1_mdxbmh.png)
+![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947441/edit-delete_aoyte5.jpg)
 
 ### Font
-
-### Colours
-
-
+I used the font Laila that look informal and a fun font for the users. I also choosed a fire effect on the header in the bootstrap card.
 
 ### Icons
+I used fontawesome to make icons.
 
 
 ## Features
 ### Logo
+The main title is quite large for the users to see. The title has a little shading effect to make it stand out a little.
 
 
+### booking card
+The bootstrap card has a darker color that stands out from the green calm colors from the website.
+![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947441/booking_e97qon.jpg)
+### Edit or delete booking card
+The bootstrap card has a darker color that stands out from the green calm colors from the website.
+The buttons has different colors. The delete button has a strong red color that symbolise danger. The edit button has a green bright color.
+![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947441/edit-delete_aoyte5.jpg)
 ### Home Image
+The concert Image is to display that this is a concert booking site. I am the owner of the image.
 
-
-
-### Welcome text
-
-
-### Timetable
-
-
-
-### Diary page
-
-
-
+### sing-in page
+![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947440/login_vsgmzr.jpg)
 ### Sign-up page
-
-
+![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947440/register_cy1rwb.jpg)
 
  ### Footer
-
-
-
+ A small footer at the end with a youtube link attach to it.
 
 ### Navigation bar
+The Navigation bar has strong colors that stands out from the calmer base colors that the website has.
 
 
 
@@ -195,25 +197,102 @@ I used different technologies to make this webpage:
 * Coolors
 * Balsamiq
 * Fontawesome
+* Flow chart
+* Gitpod
+* GitHub
+* Heroku
+* SQLite
+* PostgreSQL
+* Git
+* Bootstrap 5
 * Google Fonts
+* Django
 * Am I responsive
 * VS-code
+* Python3
 * Git Hub
+* cloudinary
 * Chrome Dev Tool
 * Css Validator
 * Html Validator
+* Javascript
 
 ## Languages
 
 * HTML5
 * CSS
-
-
-
-
-## Testing 
-
-
+## Manuel Testing 
+Because of lack of time, I choosed to manually test my website.
+### Landing page
+* I click on nav button home to check I am navigated to home.
+* I check that the hoover effect occur on the home nav button
+* I click on the next nav button Login to check I am navigated to the login page.
+* I check that the hoover effect occur on the login nav button
+* I click on the next nav button register to check that I am navigated to the registration page.
+* I check that the hoover effect occur on the register nav button
+* I click on the next nav button About to check that I am navigated to the about_booking.html page.
+* I check that the hoover effect occur on the about nav button
+* I click on the youtube button to check that I am navigated to youtube index page.
+* I click on the book button to see if I am restricted to book, because I am not logged in.
+* I check that the hoover effect occur on the book button
+* I write in the address bar to see if I can navigate to the booking.html page without that I am logged in. I see an error page.
+* I write in the address bar to see if I can navigate to the show_booking.html page without that I am logged in. I see an error page.
+* I write in the address bar to see if I can navigate to the edit_booking.html page without that I am logged in. I see an error page.
+### Register page
+* I register in the register page. I check if I can write a username.
+* I check if I can write an email in the email input form. I also check if I can write a non email input, I can not.
+* I write a password, I check if I can write a different password below, I can not.
+* I click the sign up button, to check if it works.
+* I check that the hoover effect occur on the sign up button.
+* After registration, I check if the navbar names changes: The login button label is now changed to Logout label.
+* I check that the hoover effect occur on the logout nav button
+* After registration, I check if the navbar names changes: The register button label is now changed to "Your Tickets".
+* I check that the hoover effect occur on the "your tickets" nav button.
+* I click on book button, to check that I now am navigated to booking.html page.
+### Sign in page
+* I check if I can write another username and a different password, I can not.
+* I click on sign in button with empty inputs, it does not work.
+* I write in my username and password, when I click the button, I get logged in.
+* I click on sign in button, to check that I now am navigated to home page.
+* I check that the hoover effect occur on the "sign in"  button.
+### Sign Out page
+* I click on sign out button, to check that I now am navigated to home page.
+* I click on sign out button, to check that I am signed out
+* I check that the hoover effect occur on the "sign out"  button.
+### Booking page
+* I check that I can choose the summer concert in my booking.
+* I check if I can write letters in the ticket input, I can not.
+* I check if I can order 0 tickets, I can not. Error message
+* I check if I can order 100 tickets, I can not (total amount is 50). Error message occurs
+*  I check if I can order 51 tickets, I can not (total amount is 50) Error message occurs
+* I check if I can order 50 tickets, I can (total amount is 50). success message
+* I click on book button to check if I can book, I can.
+* I check that the hoover effect occur on the book button.
+* I check that I am navigated to show_booking.html after I have booked, I can.
+### Your booking(show_booking.html)
+* I check to see if I see information about how many tickets I have booked and for what concert.
+* I click on edit button, to see if I am navigated to edit_booking.html page.
+* I check that the hoover effect occur on the edit button.
+* I click on the delete button, to see if my tickets gets deleted.
+* I click on the delete button, to see if I am navigated to home page.
+* I click on delete button to see if a success message about my deleted tickets occurs.
+* I check that the hoover effect occur on the delete button.
+### Edit booking page
+* I check if I can choose another concert, I can, it is a selector.
+* I check if I can choose another amount of tickets, I can.
+* I check if I can book 0 tickets, I can not. Error message occur.
+* I check if I can book 100 tickets, I can not. Error message occur.
+* I click on update button, to see if it works, it does.
+* I check that the hoover effect occur on the update button.
+* I click on edit button to see if I am navigated to show_booking.html.
+### Admin page
+* I check the concert total amount of tickets: Does the tickets decrease when a user book tickets, it does.
+* I check the concert total amount of tickets: Does the tickets increase when a user book tickets to a lower amount, it does not.
+* I check the concert total amount of tickets: Does the tickets decrease when a user book tickets to a higher amount, it does not.
+* I check the concert total amount of tickets: Does the tickets increase when a user delete tickets, it does not.
+* I check if I can add new concerts
+* I check if I can add new venues.
+* I check if only admin can login to admin page.
 
 
 ### Validator Testing 
@@ -224,27 +303,88 @@ I used different technologies to make this webpage:
 **CSS**
 
 * The official Jigsaw validator showed no errors when tested.
+**PEP8**
+![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947440/pep8_nzj7dl.jpg)
+
 
 **Accessibility**
 * By using lighthouse in devtools I could see that the webpage scored very well on all the tests.
-
-
-
-### Bugs
+![image](https://res.cloudinary.com/dayrhc7js/image/upload/v1653947440/lighthouse_igerog.jpg)
 
 
 
 ### Unfixed Bugs
 * No unfixed bugs.
 
-### Commit messages
-
-
-
-
-
-
 ## Deployment
+It can be wise to deploy to heroku in the very beginning of your project. I will write a step by step from installing django till deployment.
+* in terminal write pip3 install 'django<4' gunicorn
+* in terminal write: pip3 install dj_database_url psycopg2
+* in terminal write: install dj3-cloudinary-storage
+* in terminal write: pip3 freeze --local > requirements.txt
+### django
+* django-admin startproject "name" .
+* python3 manage.py startapp "name"
+* Go to settings.py and add "name" in your installed.apps
+* python3 manage.py migrate
+* python3 manage.py runserver
+* make an env.py file
+* Make sure that env.py is included in the gitignore file.
+* Add your django password and cloudinary url inside the env.py
+### Heroku
+
+* Go into the webpage Heroku.com and create an account.
+
+* In the dashboard in Heroku, click on the "create new app".
+
+* Give your app a unique name and choose your region. Now click on "create app"
+
+* click on resources, add Postgres.
+
+
+* Go to setting tab and find Config Vars, Click on the "Reveal config Vars" and copy the
+ postgres database url.
+
+* In your project, make an env.py file and add postgres database url.
+
+* In Heroku, go to setting tab and find Config Vars. Click on the "Reveal Config Vars".
+* In Heroku add PORT as key and value 8000 in config vars
+* In Heroku add django secret password in config vars
+* In Heroku add cloudinary url in config vars.
+* Remember to add cloudinary in installed apps in your project.
+
+* In settings.py find the section about databases and write this:
+
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+}
+
+* Write python3 manage.py migrate
+* Now you are using the heroku database
+
+* In settings.py write this, so you can use herokuapp and localhost. ALLOWED_HOSTS = ['small-venue-booking-app.herokuapp.com', 'localhost']
+* You also need to set up your static files in settings.py: write this in settings.py:
+ STATIC_URL = '/static/'
+ STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+ STATICFILES_DIRS = (os.path.join('static'), )
+ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+ MEDIA_URL = '/media/'
+ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+* You also need to create an template directory in settings.py Write this in settings.py:
+  TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+* Find DIRS in settings.py and add TEMPLATES_DIR
+* Now add a Procfile to your project. Inside Procfile, write this: web: gunicorn codevenue.wsgi
+* Now you can save, commit deployment and push it to the github if you use that deployment method.
+
+* In heroku, click on Deploy button.
+* In heroku Below, click on "Deploy Branch"button.
+* Heroku will let you know if the app was successfully deployed.
+
+* Now you can view your app by clicking on the button below the notification.
+
+* You can also choose if the app will rebuild automatically when you do changes and push the code. If you will enable, click "Enable automatic Deploys".
+
 
 
 
