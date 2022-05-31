@@ -379,7 +379,9 @@ DATABASES = {
 ## Bugs
 I had a big bug when I tried to deploy to heroku. I tried for 7 hours , and after 7
 hours we finally found the problem. I will thank James and Ger for their hard work. We found out that
-cloudinary had massive files with fontawesome. After 7 hours, after making a new cloudinary. Everything went fine. I have now had to stress inplant all my images again cross the site and readme. 1 hour deadline left.
+cloudinary had massive files with fontawesome. It caused an etag error. After 7 hours, after making a new cloudinary. Everything went fine. I have now had to stress inplant all my images again cross the site and readme. 1 hour deadline left.
+New deployment etag error, the image size must be small. Bug fixed and deployment works again.
+Some bad commit messages in the end to try deploying to heroku. I had to delete several images for the readme file. Those images size was only 149kb or less.
 
 ## Credits 
 I would like to give my deepest thanks to Get and Shean from code institute.
