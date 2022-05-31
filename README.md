@@ -57,7 +57,7 @@ Account registration:
 
 ### Kanban planner
 
-![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989928/user-story_zm3yva.png)
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653991533/user-story_yh1x1f.png)
 
 
 ### Strategy plane
@@ -130,7 +130,7 @@ The users can register and create an account, so they can book and save their ti
 The users can log in and can book tickets and see their bookings. This is also done by django Allauth.
 
 Below you can see a flow chart of the webpage and see how the templates are connected.
-![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989901/flow_bwhiqa.png)
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653991533/flow_nymz3m.png)
 
 
 As you can see on the flow chart, only logged in users can book tickets and save their booking information. The users will be navigated to the registraion page if their are not logged in. If the users try to go to booking page by typing the address, this will not work, since the users must be authenticated. When a user book tickets, this information will be posted to the admin. The users can see their booking on the page after they have booked tickets. The users can now decide if they want to delete or edit their booking. A success message will arrive when a user book, edit, delete, login or logout. An error message will occur if the users try to order 0 tickets or book tickets more than the total amount of tickets.
@@ -138,6 +138,18 @@ A user can only book tickets for themselves. A user can not book tickets for oth
 
 
 ## Skeleton plane 
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653991533/about_sbvmdt.png)
+
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653991533/landing-page_txeach.png)
+
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653991533/edit-delete_wukiwm.png)
+
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653991534/login_mjsjj9.png)
+
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653991533/booking_bg44kr.png)
+
+![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653991534/signout_fdinip.png)
+
 
 
 
@@ -173,14 +185,6 @@ The buttons has different colors. The delete button has a strong red color that 
 ### Home Image
 
 The concert Image is to display that this is a concert booking site. I am the owner of the image.
-
-### sing-in page
-![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989902/login_bvyp17.jpg)
-
-
-### Sign-up page
-![image](https://res.cloudinary.com/dc0kpuyfc/image/upload/v1653989902/register_njxkbk.jpg)
-
 
  ### Footer
  A small footer at the end with a youtube link attach to it.
